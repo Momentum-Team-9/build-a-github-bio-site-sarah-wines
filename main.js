@@ -4,19 +4,32 @@ console.log('hi');
 function githubCardToHtml(sarah) {
   return `<span class="Card">
     <h1>Sarah Lodico Wines</h1>
+    <div class="container">
     <div class="basics">
       <h2>The Basics</h2>
-      <div class="field">Name:</div>
-      <div class="value">${sarah.name}</div>
-      <div class="field">GitHub URL:</div>
-      <div class="field">Company:</div>
+      <div class="fields">
+      <div class="pair"><div class="field">Name: </div>
+      <div class="value">${sarah.name}</div></div>
+      
+      <div class="pair"><div class="field">GitHub URL: </div>
+      <a href="${sarah.html_url}"class="value">${sarah.login}</a></div>
+      <div class="pair">
+      <div class="field">Company: </div>
+      <div class="value">${sarah.company}</div></div>
+      <div class="pair">
       <div class="field">LinkedIn:</div>
+      <a href="${sarah.blog}"class="value">LinkedIn</a>
+      </div></div>
     </div>
     <div class="story">
       <h2>The Story</h2>
-      <div class="bio"></div>
+      <div class="bioimg">
+      <div class="bio">${sarah.bio}</div>
+      <img class="img" src= ${sarah.avatar_url}>
+      </div>
     </div>
-  </span>;`;
+    </div>
+  </span>`;
 }
 
 fetch('https://api.github.com/users/sarah-wines')
