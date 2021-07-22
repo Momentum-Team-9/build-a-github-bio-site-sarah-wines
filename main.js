@@ -3,10 +3,10 @@ console.log('hi');
 
 function githubCardToHtml(sarah) {
   return `<span class="Card">
-    <h1>Sarah Lodico Wines</h1>
+    <h1>Sarah Wines</h1>
     <div class="container">
     <div class="basics">
-      <h2>The Basics</h2>
+      <h2 class="basicTitle">The Basics</h2>
       <div class="fields">
       <div class="pair"><div class="field">Name: </div>
       <div class="value">${sarah.name}</div></div>
@@ -17,7 +17,7 @@ function githubCardToHtml(sarah) {
       <div class="field">Company: </div>
       <div class="value">${sarah.company}</div></div>
       <div class="pair">
-      <div class="field">LinkedIn:</div>
+      <div class="field">Connect:</div>
       <a href="${sarah.blog}"class="value">LinkedIn</a>
       </div></div>
     </div>
